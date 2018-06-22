@@ -1,0 +1,336 @@
+.parameter {
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+.parameter > li{
+    position: relative;
+
+}
+
+ul.parameter > li:hover > ul.subparameter {
+    display: block;
+    transition: all 2s ease-in-out;
+    visibility:visible;
+    background-color: white;
+}
+
+ul.parameter > li > ul.subparameter >li:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+ul.parameter > li:first-child:hover > ul.subparameter > span {
+    width: 290px;
+    color: white;
+    text-transform: none;
+}
+
+ul.parameter > li:first-child:hover > ul.subparameter > span:first-of-type {
+    margin-top: 10px;
+}
+
+ul.parameter > li:first-child:hover > ul.subparameter > span:nth-last-of-type(2) {
+    margin-top: -10px;
+}
+
+ul.parameter > li:first-child:hover > ul.subparameter > span:last-of-type {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+ul.parameter > li:first-child:hover > ul.subparameter > div:not(:last-of-type) {
+    float: left;
+    width: 60px;
+    height: 25px;
+    line-height: 20px;
+    margin: 10 0;
+    color: white;
+}
+
+ul.parameter > li:first-child:hover > ul.subparameter > div:last-of-type{
+    height: 20px;
+    width: 20px;
+    background-image: url(src/cross.png);
+    position: absolute;
+    top: calc(100% - 73px);
+    left: calc(100% - 42px);
+    background-size: contain;
+}
+
+ul.parameter > li:first-child:hover > ul.subparameter > input {
+    width: 210;
+    height: 25px;
+    margin: 10 0;
+    font-size: 12pt;
+    color: #293b5d;
+}
+
+.subparameter {
+    position: absolute;
+    display: none;
+    background-color: white;
+    list-style-type: none;
+    padding-left: 0;
+    top: 31px;
+    left: 0;
+}
+
+.subparameter > li{
+    line-height: 30px;
+    text-align-last: left;
+    padding: 0 20px;
+    display: block;
+    white-space: pre;
+    cursor: pointer;
+}
+
+.draw_button{
+    height: 30px;
+    width: 85px;
+    background-color: rgb(56, 120, 199);
+    z-index: 1;
+    color: white;
+    line-height: 30px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.draw_button_active{
+    background-color: rgb(197, 1, 1);
+}
+
+.search_panel {
+    background-color: rgba(0, 0, 0, 0.32);
+    z-index: 2;
+    height: 75px;
+    width: 875px;
+    position: absolute;
+    line-height: 75px;
+    padding: 5px;
+    top: 150px;
+    left: calc(100vw/2 - 450px);
+    border: 1px solid white;
+}
+
+.general {
+    font-size: 11pt;
+    color: #1E3054;
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    height: 30px;
+    text-align-last: center;
+    margin: 0 -5px 0 0;
+    padding: 0 0 0 5px;
+    display: inline;
+    cursor: pointer;
+    display: inline-flex;
+    width: 100px;
+}
+
+.general>div {
+    height: 25px;
+    background-color: rgba(156, 156, 156, 0.38);
+    margin: 2px 0 0 10px;
+    width: 2px;
+}
+
+.general:first-child {
+    margin-left: 22px;
+}
+
+.search_panel button{
+    font-size: 12pt;
+    color: #fbfbfb;
+    border-width: 0;
+    background-color: #0b9700;
+    height: 30px;
+    width: 120px;
+    margin-left: -4px;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0;
+}
+
+.main_input{
+    position: relative;
+    left: -30px;
+}
+
+hr{
+    width: 75%;
+    margin: 0 auto;
+    border-color: rgba(128, 128, 128, 0.07);
+    border-width: thin;
+}
+
+span{
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+ul.parameter > li:first-child:hover > ul.subparameter{
+    background-color: rgb(237, 109, 17);
+    box-shadow: -5px 8px 10px rgba(0, 0, 0, 0.49);
+}
+
+@media screen and (max-width: 965px) {
+    .search_panel{
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        border: 0;
+        background-image: url(src/find.png);
+        background-size: contain;
+        position: static;
+        top: 35;
+        left: calc(100% - 110px);
+    }
+    .search_panel>ul{
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-y: scroll;
+        padding-top: 130px;
+        min-height: calc(100% - 130px);
+        height: 100px;
+    }
+    .search_panel>ul>li{
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    .search_panel>ul>li:first-child{
+        margin-top: 9%;
+
+    }
+    .search_panel>ul>li>div{
+        width: 100%;
+        height: 1px;
+        margin: 0;
+        order: 2;
+    }
+
+    ul.parameter > li:hover > ul.subparameter {
+        position: relative;
+        margin: 0;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    .draw_button{
+        margin-top: 10%;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        font-size: 25pt;
+        text-align-last: center;
+        margin: 0;
+        color: #5f6c88;
+        text-transform: uppercase;
+        background-color: white;
+        -webkit-tap-highlight-color: rgb(241, 241, 241);
+        order: 7;
+    }
+
+    .draw_button:after{
+        content: " ";
+        height: 1px;
+        width: 100%;
+        border-bottom: 1px solid #d9d9d9;
+        display: block;
+    }
+    .search_panel button{
+        display: block;
+        height: 80px;
+        width: 500px;
+        font-size: 25pt;
+        margin: 30px auto 20px;
+        order: 8;
+    }
+
+    span{
+        margin-top: 10%;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        font-size: 25pt;
+        text-align-last: center;
+        margin: auto;
+        color: #5f6c88;
+        text-transform: uppercase;
+    }
+
+    ul.parameter > li:first-of-type > span {
+
+    }
+
+    ul>li>ul>hr{
+        display: none;
+    }
+
+    .subparameter > li{
+        font-size: 25pt;
+        color: #b0b0af;
+        text-align-last: center;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 80px;
+        line-height: 80px;
+    }
+
+    .subparam_open{
+        background-color: rgb(241, 241, 241);
+    }
+
+    .draw_button_active{
+        background-color: rgb(241, 241, 241);
+    }
+
+    ul.parameter > li:first-child:hover > ul.subparameter > span {
+        width: 100%;
+        font-size: 18pt;
+        height: 40px;
+        line-height: 40px;
+    }
+
+
+
+    ul.parameter > li:first-child:hover > ul.subparameter > div:not(:last-of-type) {
+        width: 100px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 18pt;
+        margin-left: 15px;
+    }
+
+    ul.parameter > li:first-child:hover > ul.subparameter > input {
+        width: calc(100% - 220px);
+        height: 50px;
+        font-size: 20pt;
+        border: 1px solid silver;
+    }
+
+    ul.parameter > li:first-child:hover > ul.subparameter > div:last-of-type {
+        height: 50px;
+        width: 50px;
+        top: calc(100% - 110px);
+        left: calc(100% - 155px);
+    }
+
+}

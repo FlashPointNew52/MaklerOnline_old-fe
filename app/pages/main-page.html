@@ -1,0 +1,44 @@
+<div class = "main_body">
+    <div class = "screen1">
+        <div class = "filter1"></div>
+        <p>ZAVRUS PRESENTS</p>
+        <p>Аренда без посредников</p>
+        <p>Теперь с поиском на КАРТЕ, c функцией ПОМОЩНИК и более <br> расширенной базой объектов недвижимости.</p>
+    </div>
+    <div class = "screen2">
+        <div class = "advantages">
+            <ul>
+                <li *ngFor="let title of titles">
+                    <div class = "icon" [ngStyle]="{'background-image': 'url(' + title.icon + ')'}"></div>
+                    <div class = "text">{{title.text}}</div>
+                </li>
+            </ul>
+        </div>
+        <div class = "add">
+            <div class = "filter1"></div>
+            <ul>
+                <li *ngFor="let data of dates">
+                    <div class = "number">{{data.count}}</div>
+                    <div class = "text">{{data.text}}</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class = "screen3">
+        <div class = "reviews" id='reviews'>
+            <div class = "previous" (click)="nextReview(false)"></div>
+            <div class = "review" *ngFor="let rev of reviews" [@isVisibleChanged]="rev.state" [style.right]="rev.position">
+                <div class = "photo" [ngStyle]="{'background-image': 'url(' + rev.photo + ')'}"></div>
+                <div class = "flex_base">
+                    <span class = "text"><td>{{rev.text}}</td></span>
+                    <span class = "name">{{rev.name}}</span>
+                    <span class = "job">{{rev.job}}</span>
+                </div>
+            </div>
+            <div class = "next" (click)="nextReview(true)"></div>
+        </div>
+        <div class = "footer">
+
+        </div>
+    </div>
+</div>

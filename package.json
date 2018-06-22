@@ -1,0 +1,48 @@
+{
+  "name": "RplusZavrus",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "lite": "lite-server",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings",
+    "serve": "http-server . -p 9999",
+    "update": "npm update"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
+    }
+  ],
+  "dependencies": {
+    "@angular/common": "~2.4.4",
+    "@angular/compiler": "~2.4.4",
+    "@angular/core": "~2.4.4",
+    "@angular/forms": "~2.4.4",
+    "@angular/http": "~2.4.4",
+    "@angular/platform-browser": "~2.4.4",
+    "@angular/platform-browser-dynamic": "~2.4.4",
+    "@angular/router": "~3.4.4",
+    "@angular/upgrade": "~2.4.4",
+    "angular-in-memory-web-api": "~0.2.4",
+    "angular2-localstorage": "^0.4.0",
+    "bootstrap": "^3.3.7",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.9",
+    "rxjs": "5.0.3",
+    "systemjs": "0.20.0",
+    "zone.js": "^0.7.6"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.4.3",
+    "concurrently": "^3.1.0",
+    "http-server": "0.9.0",
+    "lite-server": "^2.2.2",
+    "typescript": "^2.1.5",
+    "typings": "^2.1.0"
+  }
+}
